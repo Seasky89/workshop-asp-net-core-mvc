@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace SalesWebMvc.Models
+﻿namespace SalesWebMvc.Models
 {
     public class Seller
     {
