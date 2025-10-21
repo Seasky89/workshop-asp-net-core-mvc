@@ -45,9 +45,14 @@ namespace SalesWebMvc
             else
             {
                 app.UseDeveloperExceptionPage();
-                using var scope = app.Services.CreateScope();
-                var seeder = scope.ServiceProvider.GetService<SeedingService>();
-                seeder.Seed();
+                //using var scope = app.Services.CreateScope();
+                //var seeder = scope.ServiceProvider.GetService<SeedingService>();
+                //seeder.Seed();
+                using (var scope = app.Services.CreateScope())
+                {
+                    var seedingService = scope.ServiceProvider.GetRequiredService<SeedingService>();
+                    seedingService.Seed();
+                }
             }
 
                 app.UseHttpsRedirection();
