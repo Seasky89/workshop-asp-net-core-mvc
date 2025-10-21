@@ -1,8 +1,10 @@
-﻿@model SalesWebMvc.Models.ViewModels.SellerFormViewModel;
+﻿@model SalesWebMvc.Models.ViewModels.SellerFormViewModel
+
 @{
     ViewData["Title"] = "Edit";
 }
-<h2>@ViewData["Title"]</h2>
+
+<h1>@ViewData["Title"]</h1>
 
 <h4>Seller</h4>
 <hr />
@@ -41,8 +43,10 @@
     </div>
 </div>
 
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
