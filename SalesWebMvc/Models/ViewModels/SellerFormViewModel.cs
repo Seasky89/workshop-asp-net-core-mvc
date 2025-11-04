@@ -1,8 +1,7 @@
-﻿namespace SalesWebMvc.Models.ViewModels
+﻿namespace SalesWebMvc.Models.ViewModels;
+
+public class SellerFormViewModel
 {
-    public class SellerFormViewModel
-    {
-        public Seller Seller { get; set; }
-        public ICollection<Department> Departments { get; set; }
-    }
+    public Seller Seller { get; set; }
+    public ICollection<Department> Departments { get; set; }
 }
